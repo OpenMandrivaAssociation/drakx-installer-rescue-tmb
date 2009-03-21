@@ -8,6 +8,7 @@ Name: %{name}
 Version: %{version}
 Release: %{release}
 Source0: %{base_name}-%{version}.tar.bz2
+Patch0:  %{base_name}-reiser4.patch
 License: GPL
 Group: Development/Other
 Url: http://wiki.mandriva.com/Tools/DrakX
@@ -17,7 +18,7 @@ BuildRequires: ldetect-lst-devel
 BuildRequires: hexedit grub telnet rsync openssh-clients ftp-client-krb5 kbd strace
 BuildRequires: gpart parted partimage
 BuildRequires: dump xfsdump eject testdisk extipl
-BuildRequires: xfsprogs reiserfsprogs jfsprogs ntfsprogs dosfstools
+BuildRequires: xfsprogs reiserfsprogs jfsprogs ntfsprogs dosfstools reiser4progs
 BuildRequires: mdadm lvm2 dmraid
 BuildRequires: setserial
 BuildRequires: mt-st
@@ -36,6 +37,7 @@ Rescue image based on kernel-tmb
 
 %prep
 %setup -q -n %{base_name}-%{version}
+%patch0 -p1 -b .reiser4
 
 %build
 make -C rescue
