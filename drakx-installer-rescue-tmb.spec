@@ -1,12 +1,13 @@
-%define name drakx-installer-rescue
+%define base_name drakx-installer-rescue
+%define name %{base_name}-tmb
 %define version 1.12
 %define release %mkrel 1
 
-Summary: Rescue image
+Summary: Rescue image adapted for kernel-tmb
 Name: %{name}
 Version: %{version}
 Release: %{release}
-Source0: %{name}-%{version}.tar.bz2
+Source0: %{base_name}-%{version}.tar.bz2
 License: GPL
 Group: Development/Other
 Url: http://wiki.mandriva.com/Tools/DrakX
@@ -31,10 +32,10 @@ BuildRequires: ldetect-lst >= 0.1.222
 BuildRequires: ntfs-3g
 
 %description
-rescue image
+Rescue image based on kernel-tmb
 
 %prep
-%setup -q
+%setup -q -n %{base_name}-%{version}
 
 %build
 make -C rescue
