@@ -1,7 +1,7 @@
 %define base_name drakx-installer-rescue
 %define name %{base_name}-tmb
 %define version 1.14
-%define release %mkrel 1
+%define release %mkrel 2
 
 Summary: Rescue image adapted for kernel-tmb
 Name: %{name}
@@ -10,6 +10,7 @@ Release: %{release}
 Source0: %{base_name}-%{version}.tar.bz2
 Patch0:  %{base_name}-reiser4.patch
 Patch1:  %{base_name}-ext4.patch
+Patch2:  %{base_name}-tmb.patch
 License: GPL
 Group: Development/Other
 Url: http://wiki.mandriva.com/Tools/DrakX
@@ -26,7 +27,7 @@ BuildRequires: mt-st
 BuildRequires: pciutils ldetect
 BuildRequires: packdrake rpmtools
 BuildRequires: vim-minimal
-BuildRequires: drakx-installer-binaries drakxtools-backend drakx-kbd-mouse-x11
+BuildRequires: drakx-installer-binaries-tmb drakxtools-backend drakx-kbd-mouse-x11
 BuildRequires: bind-utils nfs-utils-clients wget
 BuildRequires: ka-deploy-source-node
 BuildRequires: cdialog
@@ -42,6 +43,7 @@ Rescue image based on kernel-tmb
 %setup -q -n %{base_name}-%{version}
 %patch0 -p1 -b .reiser4
 %patch1 -p1 -b .ext4
+%patch2 -p1 -b .tmb
 
 %build
 make -C rescue
