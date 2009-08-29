@@ -26,7 +26,7 @@ BuildRequires: mt-st
 BuildRequires: pciutils ldetect
 BuildRequires: packdrake rpmtools
 BuildRequires: vim-minimal
-BuildRequires: drakx-installer-binaries-tmb drakxtools-backend drakx-kbd-mouse-x11
+BuildRequires: drakx-installer-binaries drakxtools-backend drakx-kbd-mouse-x11
 BuildRequires: bind-utils nfs-utils-clients wget
 BuildRequires: ka-deploy-source-node
 BuildRequires: cdialog
