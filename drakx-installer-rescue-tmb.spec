@@ -45,7 +45,7 @@ Rescue image based on kernel-tmb
 %patch0 -p1 -b .reiser4
 %patch1 -p1 -b .ext4
 %patch2 -p1 -b .binaries
-%patch2 -p1 -b .blkid
+%patch3 -p1 -b .blkid
 
 
 %build
