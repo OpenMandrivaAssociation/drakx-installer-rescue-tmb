@@ -10,7 +10,7 @@ Release: %{release}
 Source0: %{base_name}-%{version}.tar.bz2
 Patch0:  %{base_name}-reiser4.patch
 Patch1:  %{base_name}-ext4.patch
-Patch2:  %{base_name}-tmb.patch
+Patch2:  %{base_name}-tmb-binaries.patch
 License: GPL
 Group: Development/Other
 Url: http://wiki.mandriva.com/Tools/DrakX
@@ -43,7 +43,7 @@ Rescue image based on kernel-tmb
 %setup -q -n %{base_name}-%{version}
 %patch0 -p1 -b .reiser4
 %patch1 -p1 -b .ext4
-%patch2 -p1 -b .tmb
+%patch2 -p1 -b .binaries
 
 %build
 make -C rescue
