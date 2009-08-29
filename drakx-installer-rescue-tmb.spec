@@ -1,6 +1,6 @@
 %define base_name drakx-installer-rescue
 %define name %{base_name}-tmb
-%define version 1.12
+%define version 1.14
 %define release %mkrel 1
 
 Summary: Rescue image adapted for kernel-tmb
@@ -31,6 +31,8 @@ BuildRequires: ka-deploy-source-node
 BuildRequires: cdialog
 BuildRequires: ldetect-lst >= 0.1.222
 BuildRequires: ntfs-3g
+BuildRequires: cryptsetup photorec quota
+BuildRequires: pv
 
 %description
 Rescue image based on kernel-tmb
