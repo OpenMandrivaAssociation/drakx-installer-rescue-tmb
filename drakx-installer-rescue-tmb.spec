@@ -1,7 +1,7 @@
 %define base_name drakx-installer-rescue
 %define name %{base_name}-tmb
-%define version 1.14
-%define release %mkrel 2
+%define version 1.15
+%define release %mkrel 1
 
 Summary: Rescue image adapted for kernel-tmb
 Name: %{name}
@@ -9,9 +9,7 @@ Version: %{version}
 Release: %{release}
 Source0: %{base_name}-%{version}.tar.bz2
 Patch0:  %{base_name}-reiser4.patch
-Patch1:  %{base_name}-ext4.patch
 Patch2:  %{base_name}-tmb-binaries.patch
-Patch3:  %{base_name}-blkid.patch
 License: GPL
 Group: Development/Other
 Url: http://wiki.mandriva.com/Tools/DrakX
@@ -43,9 +41,7 @@ Rescue image based on kernel-tmb
 %prep
 %setup -q -n %{base_name}-%{version}
 %patch0 -p1 -b .reiser4
-%patch1 -p1 -b .ext4
 %patch2 -p1 -b .binaries
-%patch3 -p1 -b .blkid
 
 
 %build
