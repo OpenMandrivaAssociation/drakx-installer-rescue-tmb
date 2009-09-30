@@ -57,7 +57,7 @@ rm -rf $RPM_BUILD_ROOT
 
 dest=$RPM_BUILD_ROOT%{_libdir}/%name
 mkdir -p $dest
-cp -r rescue/rescue.sqfs $dest
+cp -r rescue/tmbresc.sqfs $dest
 
 %clean
 rm -rf $RPM_BUILD_ROOT
