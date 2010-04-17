@@ -1,7 +1,7 @@
 %define base_name drakx-installer-rescue
 %define name %{base_name}-tmb
-%define version 1.16
-%define release %mkrel 2
+%define version 1.18
+%define release %mkrel 1
 
 Summary: Rescue image adapted for kernel-tmb
 Name: %{name}
@@ -27,7 +27,7 @@ BuildRequires: mt-st
 BuildRequires: pciutils ldetect
 BuildRequires: packdrake rpmtools
 BuildRequires: vim-minimal
-BuildRequires: drakx-installer-binaries-tmb >= 1.42-3
+BuildRequires: drakx-installer-binaries-tmb >= 1.45
 BuildRequires: drakxtools-backend drakx-kbd-mouse-x11
 BuildRequires: bind-utils nfs-utils-clients wget
 BuildRequires: ka-deploy-source-node
