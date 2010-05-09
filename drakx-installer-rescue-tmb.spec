@@ -1,6 +1,6 @@
 %define base_name drakx-installer-rescue
 %define name %{base_name}-tmb
-%define version 1.18
+%define version 1.19
 %define release %mkrel 1
 
 Summary: Rescue image adapted for kernel-tmb
@@ -17,7 +17,7 @@ Url: http://wiki.mandriva.com/Tools/DrakX
 BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-buildroot
 BuildRequires: perl-XML-Parser squashfs-tools mknod-m600
 BuildRequires: ldetect-lst-devel
-BuildRequires: hexedit grub telnet rsync openssh-clients ftp-client-krb5 kbd strace
+BuildRequires: hexedit grub rsync openssh-clients krb5-appl-clients kbd strace
 BuildRequires: gpart parted partimage
 BuildRequires: dump xfsdump eject testdisk extipl
 BuildRequires: xfsprogs reiserfsprogs jfsprogs ntfsprogs dosfstools reiser4progs
