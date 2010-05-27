@@ -1,6 +1,6 @@
 %define base_name drakx-installer-rescue
 %define name %{base_name}-tmb
-%define version 1.19
+%define version 1.21
 %define release %mkrel 1
 
 Summary: Rescue image adapted for kernel-tmb
@@ -21,7 +21,7 @@ BuildRequires: hexedit grub rsync openssh-clients krb5-appl-clients kbd strace
 BuildRequires: gpart parted partimage
 BuildRequires: dump xfsdump eject testdisk extipl
 BuildRequires: xfsprogs reiserfsprogs jfsprogs ntfsprogs dosfstools reiser4progs
-BuildRequires: mdadm lvm2 dmraid
+BuildRequires: mdadm lvm2 dmraid kpartx dmraid-events dmsetup
 BuildRequires: setserial
 BuildRequires: mt-st
 BuildRequires: pciutils ldetect
