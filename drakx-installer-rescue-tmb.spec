@@ -1,7 +1,7 @@
 %define base_name drakx-installer-rescue
 %define name %{base_name}-tmb
 %define version 1.21
-%define release %mkrel 4
+%define release %mkrel 5
 
 Summary: Rescue image adapted for kernel-tmb
 Name: %{name}
