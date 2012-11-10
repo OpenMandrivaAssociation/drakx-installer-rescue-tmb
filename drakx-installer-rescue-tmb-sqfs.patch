@@ -1,0 +1,48 @@
+diff -Naurp drakx-installer-rescue-1.21.orig3//rescue/Makefile drakx-installer-rescue-1.21//rescue/Makefile
+--- drakx-installer-rescue-1.21.orig3//rescue/Makefile	2010-05-19 12:05:18.000000000 +0300
++++ drakx-installer-rescue-1.21//rescue/Makefile	2010-05-27 20:08:45.110827439 +0300
+@@ -3,7 +3,7 @@ include ../Makefile.config
+ VERSION=1.21
+ PRODUCT=drakx-installer-rescue
+ 
+-RESCUE = rescue.sqfs
++RESCUE = tmbresc.sqfs
+ 
+ all: $(RESCUE)
+ 
+diff -Naurp drakx-installer-rescue-1.21.orig3//rescue/make_flash_rescue drakx-installer-rescue-1.21//rescue/make_flash_rescue
+--- drakx-installer-rescue-1.21.orig3//rescue/make_flash_rescue	2009-11-25 15:22:36.000000000 +0200
++++ drakx-installer-rescue-1.21//rescue/make_flash_rescue	2010-05-27 20:08:45.111756671 +0300
+@@ -16,7 +16,7 @@ cp -f /usr/lib/syslinux/isolinux.bin Fla
+ 
+ DISTRIB_DESCR=$DESCR RESCUE_FLASH=1 ./make_rescue_img || exit 1
+ mkdir -p .tmp/i586/install/stage2
+-cp -f rescue.sqfs .tmp/i586/install/stage2
++cp -f tmbresc.sqfs .tmp/i586/install/stage2
+ 
+ flash_param="fastboot splash=silent vga=788"
+ rescue_param="splash=verbose quiet automatic=method:cdrom rescue"
+diff -Naurp drakx-installer-rescue-1.21.orig3//rescue/make_partimage_save_rest_all drakx-installer-rescue-1.21//rescue/make_partimage_save_rest_all
+--- drakx-installer-rescue-1.21.orig3//rescue/make_partimage_save_rest_all	2008-06-13 16:17:04.000000000 +0300
++++ drakx-installer-rescue-1.21//rescue/make_partimage_save_rest_all	2010-05-27 20:08:45.111756671 +0300
+@@ -28,7 +28,7 @@ cp -f /usr/lib/syslinux/isolinux.bin ../
+ 
+ DISTRIB_DESCR="partimage save/restore all" ./make_rescue_img || exit 1
+ mkdir -p .tmp/install/stage2
+-mv -f rescue.sqfs .tmp/install/stage2
++mv -f tmbresc.sqfs .tmp/install/stage2
+ 
+ common_para="rescue automatic=method:cdrom"
+ # hda=4864,255,63 acpi=ht
+diff -Naurp drakx-installer-rescue-1.21.orig3//rescue/make_rescue_img drakx-installer-rescue-1.21//rescue/make_rescue_img
+--- drakx-installer-rescue-1.21.orig3//rescue/make_rescue_img	2009-10-09 21:00:28.000000000 +0300
++++ drakx-installer-rescue-1.21//rescue/make_rescue_img	2010-05-27 20:08:45.111756671 +0300
+@@ -5,7 +5,7 @@ use lib "/usr/lib/libDrakX";
+ use keyboard;
+ 
+ my $tmp = "/tmp/rescue_tmp";
+-my $rescue = "rescue.sqfs";
++my $rescue = "tmbresc.sqfs";
+ 
+ if ($>) {
+     $ENV{PATH} = "/sbin:/usr/sbin:$ENV{PATH}";

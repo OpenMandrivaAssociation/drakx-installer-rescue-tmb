@@ -1,0 +1,22 @@
+diff -Nurp drakx-installer-rescue-1.18.orig//rescue/list.xml drakx-installer-rescue-1.18//rescue/list.xml
+--- drakx-installer-rescue-1.18.orig//rescue/list.xml	2009-10-09 20:05:10.000000000 +0300
++++ drakx-installer-rescue-1.18//rescue/list.xml	2010-04-17 12:12:12.930727096 +0300
+@@ -60,6 +60,7 @@
+   dumpe2fs tune2fs resize2fs debugfs
+ 
+   mkfs.reiserfs resize_reiserfs reiserfstune reiserfsck
++  mkfs.reiser4 fsck.reiser4
+   mkfs.xfs xfs_admin xfs_repair fsck.xfs
+   mkfs.ntfs mkdosfs dosfslabel mkntfs ntfsresize ntfslabel 
+   <if ARCH="i.86|x86_64">
+diff -Nurp drakx-installer-rescue-1.18.orig//rescue/tree/etc/rc.sysinit drakx-installer-rescue-1.18//rescue/tree/etc/rc.sysinit
+--- drakx-installer-rescue-1.18.orig//rescue/tree/etc/rc.sysinit	2009-08-07 10:05:29.000000000 +0300
++++ drakx-installer-rescue-1.18//rescue/tree/etc/rc.sysinit	2010-04-17 12:12:12.930727096 +0300
+@@ -36,6 +36,7 @@ load vfat
+ load ext3
+ load ext4
+ load reiserfs
++load reiser4
+ load xfs
+ load jfs
+ load loop

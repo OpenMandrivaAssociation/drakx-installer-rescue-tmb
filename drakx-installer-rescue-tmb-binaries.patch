@@ -1,0 +1,12 @@
+diff -Nurp drakx-installer-rescue-1.21.orig2//rescue/list.xml drakx-installer-rescue-1.21//rescue/list.xml
+--- drakx-installer-rescue-1.21.orig2//rescue/list.xml	2010-05-27 20:06:34.000000000 +0300
++++ drakx-installer-rescue-1.21//rescue/list.xml	2010-05-27 20:07:01.045881302 +0300
+@@ -287,7 +287,7 @@
+   </from>
+ </filter>
+ 
+-<from dir="/usr/LIB/drakx-installer-binaries">
++<from dir="/usr/LIB/drakx-installer-binaries-tmb">
+   <to dir="/usr/bin">
+     rescue-gui
+   </to>
