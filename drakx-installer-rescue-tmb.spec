@@ -13,7 +13,7 @@ Patch2:  %{base_name}-tmb-binaries.patch
 Patch3:  %{base_name}-tmb-sqfs.patch
 License: GPL
 Group: Development/Other
-Url: http://wiki.mandriva.com/Tools/DrakX
+Url: https://wiki.mandriva.com/Tools/DrakX
 BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-buildroot
 BuildRequires: perl-XML-Parser squashfs-tools mknod-m600
 BuildRequires: ldetect-lst-devel
