@@ -15,6 +15,7 @@ License: GPL
 Group: Development/Other
 Url: https://wiki.mandriva.com/Tools/DrakX
 BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-buildroot
+BuildRequires:	make
 BuildRequires: perl-XML-Parser squashfs-tools mknod-m600
 BuildRequires: ldetect-lst-devel
 BuildRequires: hexedit grub rsync openssh-clients krb5-appl-clients kbd strace
